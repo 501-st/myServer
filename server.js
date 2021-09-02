@@ -1,9 +1,15 @@
-const express = require("express");
-const nodemailer = require("nodemailer")
+import express, {json} from "express"
+import nodemailer from "nodemailer"
 
 const app = express();
 
-/*app.post(["/startPage", "/adminPage"], (request, response)=>{
+
+app.use(express.json())
+app.get("/", (request, response)=>{
+    console.log(request.query)
+    response.send("GG WP")
+})
+app.post("https://my-server-ipst.herokuapp.com/api/sendForm" , (request, response)=>{
     const transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
@@ -17,46 +23,11 @@ const app = express();
         to: "englishpatient.contact@gmail.com",
         subject: "Message from the blog!",
         text: `Имя: ${request.body.name} \nОрганизация: ${request.body.organisation} \nДолжность: ${request.body.position}
-        \nE-mail: ${request.body.email} \nТелефон: ${request.body.number}`
+E-mail: ${request.body.email} \nТелефон: ${request.body.number}`
     }
-
+    response.status(200).json("Сервер работает")
+    console.log("Request:", request.body);
     transporter.sendMail(mailOptions)
-})
-
-app.listen(3000);*/
-
-
-app.use(express.static("public"))
-app.use(express.json())
-app.get("/", function(request, response){
-    response.sendFile(__dirname + "/public/index.html");
-});
-
-app.post("/", (request, response)=>{
-    const transporter = nodemailer.createTransport({
-        service: "gmail",
-        auth: {
-            user: "ratahindipst@gmail.com",
-            pass: "IPSTOneLove"
-        }
-    })
-
-    const mailOptions = {
-        from: "ratahindipst@gmail.com",
-        to: "englishpatient.contact@gmail.com",
-        subject: "Message from thr blog!",
-        text: `Hello ${request.body.number} \nwevwbenviwenv`
-    }
-
-    transporter.sendMail(mailOptions, (error)=>{
-        if (error){
-            console.log("error")
-            response.send("error")
-        }
-        else {
-            console.log("Email was successfully sent")
-        }
-    })
 })
 
 app.listen(3000);
