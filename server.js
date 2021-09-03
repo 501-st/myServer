@@ -1,8 +1,12 @@
-import express, {json} from "express"
+import express from "express"
 import nodemailer from "nodemailer"
 
 const app = express();
 app.use(express.json())
+
+app.get("/", (request, response) =>{
+    response.send("<h1>Home page</h1>")
+})
 
 app.post("/sendEmail" , (request, response)=>{
     const transporter = nodemailer.createTransport({
