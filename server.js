@@ -1,11 +1,13 @@
 import express from "express"
 import nodemailer from "nodemailer"
+import cors from "cors"
 
 const app = express();
 app.use(express.json())
+app.use(cors())
 
 app.get("/", (request, response) =>{
-    response.send("<h1>Home page</h1>")
+    response.end("<h1>Home page</h1>")
 })
 
 app.post("/sendEmail" , (request, response)=>{
