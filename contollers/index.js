@@ -4,8 +4,6 @@ class apiController {
     async sendForm(req, res) {
         try {
             const {name, organisation, position,  email, number} = req.body
-            if (name)
-                return res.status(400).json({message: "Send error", number});
             const messageTool = {
                 from: "ratahindipst@gmail.com",
                 to: "englishpatient.contact@gmail.com",
@@ -53,7 +51,5 @@ class apiController {
             res.status(400).json({status: false, message: e});
         }
     }
-
 }
-
 module.exports = new apiController()
