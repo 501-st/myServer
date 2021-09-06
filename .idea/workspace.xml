@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7c9632c1-4886-4882-945e-2a78767fcfee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contollers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/contollers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +31,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../EP-Blog" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -52,7 +49,8 @@
       <workItem from="1630647532582" duration="929000" />
       <workItem from="1630661712415" duration="200000" />
       <workItem from="1630662007800" duration="1872000" />
-      <workItem from="1630836947996" duration="5180000" />
+      <workItem from="1630836947996" duration="9234000" />
+      <workItem from="1630848006022" duration="138000" />
     </task>
     <servers />
   </component>

@@ -5,7 +5,7 @@ class apiController {
         try {
             const {name, organisation, position,  email, number} = req.body
             const messageTool = {
-                from: "ratahindipst@gmail.com",
+                from: "englishpatient.contact@gmail.com",
                 to: "englishpatient.contact@gmail.com",
                 subject: `Заявка c новостного блога English Patient`,
                 html: `
