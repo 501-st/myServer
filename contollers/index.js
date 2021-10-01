@@ -3,7 +3,7 @@ const mailer = require("../api/mailAPI");
 class apiController {
     async sendForm(req, res) {
         try {
-            const {name, roleText,  email, number, info, levelOfEnglishText} = req.body
+            const {name, roleText,  email, number, info, levelOfEnglishText, file} = req.body
             const messageTool = {
                 from: "ipst.contact@gmail.com",
                 to: "ipst.contact@gmail.com",
@@ -45,6 +45,12 @@ class apiController {
                         <th>Дополнительная информация:</th>
                         <td>
                         ${info}
+                        </td>
+                   </tr>
+                   <tr>
+                        <th>Файлы:</th>
+                        <td>
+                        ${file}
                         </td>
                    </tr>
                 </table>
