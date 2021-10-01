@@ -3,11 +3,11 @@ const mailer = require("../api/mailAPI");
 class apiController {
     async sendForm(req, res) {
         try {
-            const {name, organisation, position,  email, number} = req.body
+            const {name, roleText,  email, number, info, levelOfEnglishText} = req.body
             const messageTool = {
-                from: "englishpatient.contact@gmail.com",
-                to: "englishpatient.contact@gmail.com",
-                subject: `Заявка c новостного блога English Patient`,
+                from: "ipst.contact@gmail.com",
+                to: "ipst.contact@gmail.com",
+                subject: `Заявка c сайта IPST`,
                 html: `
                 <h2>Заявка c новостного блога English Patient</h2>
                 <table border="1" width="100%" cellpadding="5">
@@ -15,18 +15,6 @@ class apiController {
                         <th>Имя:</th>
                         <td>
                         ${name}
-                        </td>
-                   </tr>
-                   <tr>
-                        <th>Организация:</th>
-                        <td>
-                        ${organisation}
-                        </td>
-                   </tr>
-                    <tr>
-                        <th>Должность:</th>
-                        <td>
-                        ${position}
                         </td>
                    </tr>
                     <tr>
@@ -39,6 +27,24 @@ class apiController {
                         <th>Номер телефона:</th>
                         <td>
                         ${number}
+                        </td>
+                   </tr>
+                    <tr>
+                        <th>Роль на которую претендует:</th>
+                        <td>
+                        ${roleText}
+                        </td>
+                   </tr>
+                    <tr>
+                        <th>Уровень английского языка:</th>
+                        <td>
+                        ${levelOfEnglishText}
+                        </td>
+                   </tr>
+                    <tr>
+                        <th>Дополнительная информация:</th>
+                        <td>
+                        ${info}
                         </td>
                    </tr>
                 </table>
