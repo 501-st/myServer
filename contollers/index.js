@@ -4,10 +4,14 @@ class apiController {
     async sendForm(req, res) {
         try {
             const {name, roleText,  email, number, info, levelOfEnglishText, file} = req.body
+            console.log(req.body);
             const messageTool = {
                 from: "ipst.contact@gmail.com",
                 to: "ipst.contact@gmail.com",
                 subject: `Заявка c сайта IPST`,
+/*                attachments:[{
+                    filename: "image2.jpg", path: "./image2.jpg"
+                }],*/
                 html: `
                 <h2>Заявка c новостного блога English Patient</h2>
                 <table border="1" width="100%" cellpadding="5">
@@ -45,12 +49,6 @@ class apiController {
                         <th>Дополнительная информация:</th>
                         <td>
                         ${info}
-                        </td>
-                   </tr>
-                   <tr>
-                        <th>Файлы:</th>
-                        <td>
-                        ${file}
                         </td>
                    </tr>
                 </table>
