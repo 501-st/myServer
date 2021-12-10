@@ -6,8 +6,8 @@ class apiController {
             const {name, roleText,  email, number, info, levelOfEnglishText, file} = req.body
             console.log(req.body);
             const messageTool = {
-                from: "ipst.contact@gmail.com",
-                to: "ipst.contact@gmail.com",
+                from: "englishpatient.contact@gmail.com",
+                to: "englishpatient.contact@gmail.com",
                 subject: `Заявка c сайта IPST`,
 /*                attachments:[{
                     filename: "image2.jpg", path: "./image2.jpg"
